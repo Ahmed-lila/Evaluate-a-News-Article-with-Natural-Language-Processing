@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 2;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    font: 300 1rem "Roboto", sans-serif;
+    background: rgba(238, 234, 234, 0.7);
+}
+
+p {
+    margin: auto;
+}
+
+
+
+

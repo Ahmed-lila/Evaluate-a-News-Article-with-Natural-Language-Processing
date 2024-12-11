@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analyzer</title>
+</head>
+<body>
+    <header>
+        <h1>Sentiment Analyzer</h1>
+    </header>
+    <main>
+        <div class="container">
+            <p>Enter a URL of an article or blog to discover its sentiment.</p>
+            <section>
+                <form id="form">
+                    <label for="article-url">URL</label>
+                    <input id="article-url" type="text" name="input" placeholder="Enter Article URL here">
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </section>
+            <section>
+                <strong>Form Results:</strong>
+                <div id="text"></div>
+                <div id="agreement"></div>
+                <div id="subjectivity"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
+                <div id="score_tag"></div>
+            </section>
+        </div>
+    </main>
+    <script src="main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }).catch(error => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+
